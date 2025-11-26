@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: Aquaxbot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node start.js
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+      - key: DATABASE_URL
+      - key: OWNER_ID
+        value: "6245574035"
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "3030"
